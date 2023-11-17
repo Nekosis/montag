@@ -48,7 +48,7 @@ async def ping(
 @click.option(
     "--token",
     help="The bot token to log in with.",
-    default="MTE3NDkyNTgxMTA5MDk4OTEyOA.GzYf2F.rkaFrs7BDVNwi3yLuDWkZJSrr24D-NpXPej4AM",
+    default="redacted",
 )
 def main(token):
     bot.run(token)
