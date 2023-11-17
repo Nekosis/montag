@@ -63,7 +63,7 @@ async def ping(
     guild_ids=[server],
 )
 async def say(interaction: nextcord.Interaction, message: str):
-    if message is none:
+    if message is None:
         await interaction.response.send_message(
             "You must provide a message.", ephemeral=True
         )
