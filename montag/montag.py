@@ -44,6 +44,19 @@ async def ping(
     await interaction.send("Pong!")
 
 
+@bot.slash_command(
+    name="about",
+    description="Get info about Montag.",
+    guild_ids=[server],
+)
+async def ping(
+    interaction: nextcord.Interaction,
+):
+    await interaction.send(
+        "> It was a pleasure to burn.\n> It was a special pleasure to see things eaten, to see things blackened and *changed*.\nMontag for Discord\nVisit https://github.com/Nekosis/montag for more information"
+    )
+
+
 @click.command()
 @click.option(
     "--token",
