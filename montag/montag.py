@@ -57,6 +57,20 @@ async def ping(
     )
 
 
+@bot.slash_command(
+    name="say",
+    description="Make the bot say something.",
+    guild_ids=[server],
+)
+async def say(interaction: nextcord.Interaction, message: str):
+    if message is none:
+        await interaction.response.send_message(
+            "You must provide a message.", ephemeral=True
+        )
+    else:
+        await interaction.send(message)
+
+
 @click.command()
 @click.option(
     "--token",
